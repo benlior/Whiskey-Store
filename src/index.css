@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 20vh auto;
+  grid-template-columns: auto 20vw;
+  grid-template-areas: 
+  "header header"
+  "main aside";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(238, 236, 224);
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(252, 236, 234);
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(216, 242, 242);
+}
+
+section > * {
+  border: black solid 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+h2,h1,p{
+  text-align: center;
+}
+
+main > div {
+  /* background-color: blue; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
